@@ -1,4 +1,5 @@
 ﻿using System;
+using Conforming;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace N5D.SOLID
@@ -10,6 +11,24 @@ namespace N5D.SOLID
         public void AClassShouldOnlyHaveOneReasonToChange()
         {
             //A class either does work itself, or knows other classes that do work
+
+            //conforms to SRP
+            //conforms to OCP
+            //conforms to LSP
+            //violates ISP
+            //conforms to DIP
+
+            Conforming.Person parent = new Conforming.Parent();
+            Conforming.Person student = new Conforming.Student();
+
+            Conforming.Notifier absenceNotifier = GetNotifier<Conforming.Parent>(student);
+
+            parent.Notify(absenceNotifier);
+        }
+
+        private Notifier GetNotifier<T>(Person student)
+        {
+            throw new NotImplementedException();
         }
 
         [TestMethod]

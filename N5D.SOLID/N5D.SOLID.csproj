@@ -50,13 +50,16 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Conforming\AbsenceNotifier.cs" />
+    <Compile Include="Conforming\Notifier.cs" />
+    <Compile Include="Conforming\Parent.cs" />
+    <Compile Include="Conforming\Person.cs" />
+    <Compile Include="Conforming\Student.cs" />
     <Compile Include="SingleResponsibilityPrinciple.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Violating\Person.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Conforming\" />
-  </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
